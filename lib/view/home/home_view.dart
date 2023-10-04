@@ -36,77 +36,56 @@ class HomeView extends StatelessWidget {
     EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
     return Scaffold(
       appBar: AppBar(
-        actions: const [
-          Icon(
-            Icons.search,
-            size: 20,
-            color: AppColors.sub,
-          ),
-          Column(
-            children: [
-              Text(
-                "mack home",
-                style: TextStyle(
-                  color: AppColors.sub,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                ),
+        leading: const Icon(
+          Icons.search,
+          size: 20,
+          color: AppColors.sub,
+        ),
+        centerTitle: true,
+        title: const Column(
+          children: [
+            Text(
+              "MAKE HOME",
+              style: TextStyle(
+                color: AppColors.sub,
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
               ),
-              Text(
-                "mack home",
-                style: TextStyle(
-                  color: AppColors.sub,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
+            ),
+            Text(
+              "BEAUTIFUL",
+              style: TextStyle(
+                color: AppColors.sub,
+                fontWeight: FontWeight.w700,
+                fontSize: 18,
               ),
-            ],
-          ),
+            ),
+          ],
+        ),
+        actions: [
           Icon(
             Icons.shopping_cart_outlined,
             size: 20,
             color: AppColors.sub,
-          )
+          ),
         ],
       ),
       body: Column(
         children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Padding(
-              padding: EdgeInsets.only(left: 1),
-              child: Row(children: [
-                Container(
-                  width: screenWidth / 10,
-                  height: screenHeight / 20,
-                  child: Image.asset(
-                    AppAssets.roundCh,
-                  ),
-                  decoration: BoxDecoration(
-                    color: AppColors.bg,
-                  ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 4,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) => Container(
+                width: screenWidth / 10,
+                height: 10,
+                child: Image.asset(
+                  AppAssets.roundCh,
                 ),
-                SizedBox(width: 20),
-                Container(
-                  width: screenWidth / 10,
-                  height: screenHeight / 20,
-                  child: Image.asset(
-                    AppAssets.roundCh,
-                  ),
-                  decoration: BoxDecoration(
-                    color: AppColors.bg,
-                  ),
+                decoration: const BoxDecoration(
+                  color: AppColors.bg,
                 ),
-                SizedBox(width: 20),
-                Container(
-                  width: screenWidth / 10,
-                  height: screenHeight / 20,
-                  child: Image.asset(AppAssets.roundCh),
-                  decoration: BoxDecoration(
-                    color: AppColors.bg,
-                  ),
-                ),
-              ]),
+              ),
             ),
           ),
           Expanded(

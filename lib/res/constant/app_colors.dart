@@ -5,6 +5,7 @@ class AppColors {
   static const Color mblack = Color(0xFF303030);
   static const Color sub = Color(0xFF909090);
   static const Color darkg = Color(0xFF909090);
+  static const Color lGray = Color(0xFFBDBDBD);
   static const Color disable = Color(0xFFB3B3B3);
   static const Color lightg = Color(0xFFE0E0E0);
   static const Color bg = Color(0xFFF5F5F5);

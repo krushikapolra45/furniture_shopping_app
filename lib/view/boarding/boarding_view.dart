@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shopping_app/res/common/app_button.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 import 'package:furniture_shopping_app/res/constant/app_strings.dart';
@@ -53,30 +54,12 @@ class BoardingView extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                ElevatedButton(
-                  style: ButtonStyle(
-                      shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6),
-                      )),
-                      fixedSize: MaterialStatePropertyAll(
-                        Size(screenWidth / 1.1, screenHeight / 16),
-                      ),
-                      backgroundColor: const MaterialStatePropertyAll(
-                        AppColors.black,
-                      )),
-                  onPressed: () {
-                    // Get.offNamed(RoutesName.loginView);
-                  },
-                  child: const Text(
-                    AppStrings.start,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.white,
-                    ),
-                  ),
-                ),
+                AppButton(
+                  height: screenHeight / 15,
+                  width: screenWidth / 1.3,
+                  text: AppStrings.start,
+                  onPress: () {},
+                )
               ],
             ),
           ),

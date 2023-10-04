@@ -13,6 +13,7 @@ class AppStrings {
   static const String sign = "Sign up";
   //sign up
   static const String account = "Already have account?";
+  static const String wlc = "WELCOME";
   //home
   static const String hBlack = "Black Simple Lamp";
   static const String hMinimal = "Minimal Stand ";

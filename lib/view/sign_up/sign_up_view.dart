@@ -4,8 +4,8 @@ import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 import 'package:furniture_shopping_app/res/constant/app_strings.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,21 +48,21 @@ class LoginView extends StatelessWidget {
                 SizedBox(height: screenHeight / 50),
                 const Text(
                   textAlign: TextAlign.center,
-                  AppStrings.welcome,
+                  AppStrings.wlc,
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(height: screenHeight / 50),
+                SizedBox(height: screenHeight / 60),
                 Container(
-                  width: screenWidth / 1.2,
-                  height: screenHeight / 2,
+                  width: screenWidth / 1.1,
+                  height: screenHeight / 1.5,
                   color: AppColors.white,
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 48),
+                        padding: const EdgeInsets.only(top: 40),
                         child: Container(
                           height: screenHeight / 10.5,
                           width: screenWidth / 1.3,
@@ -79,7 +79,7 @@ class LoginView extends StatelessWidget {
                                 child: Padding(
                                   padding: EdgeInsets.only(top: 8.0, left: 8),
                                   child: Text(
-                                    AppStrings.email,
+                                    "name",
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: AppColors.sub,
@@ -97,6 +97,42 @@ class LoginView extends StatelessWidget {
                               ),
                             ],
                           ),
+                        ),
+                      ),
+                      SizedBox(height: screenHeight / 40),
+                      Container(
+                        height: screenHeight / 10.5,
+                        width: screenWidth / 1.3,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                              width: 1,
+                              color: AppColors.lightg,
+                            )),
+                        child: const Column(
+                          children: [
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Padding(
+                                padding: EdgeInsets.only(top: 8.0, left: 8),
+                                child: Text(
+                                  AppStrings.email,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: AppColors.sub,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                isDense: false,
+                                border: InputBorder.none,
+                                filled: false,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       SizedBox(height: screenHeight / 40),
@@ -136,29 +172,72 @@ class LoginView extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: screenHeight / 40),
-                      Text(
-                        AppStrings.fPassword,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColors.mblack,
-                          fontWeight: FontWeight.w500,
+                      Container(
+                        height: screenHeight / 10.5,
+                        width: screenWidth / 1.3,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                              width: 1,
+                              color: AppColors.lightg,
+                            )),
+                        child: const Column(
+                          children: [
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Padding(
+                                padding: EdgeInsets.only(top: 8.0, left: 8),
+                                child: Text(
+                                  "confirm password",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: AppColors.sub,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                isDense: false,
+                                border: InputBorder.none,
+                                filled: false,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       SizedBox(height: screenHeight / 40),
                       AppButton(
                         height: screenHeight / 15,
                         width: screenWidth / 1.3,
-                        text: AppStrings.log,
+                        text: AppStrings.sign,
                         onPress: () {},
                       ),
                       SizedBox(height: screenHeight / 40),
-                      Text(
-                        AppStrings.sign,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColors.mblack,
-                          fontWeight: FontWeight.w500,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RichText(
+                              text: const TextSpan(
+                            text: "Already have an account?  ",
+                            style: TextStyle(
+                              color: AppColors.sub,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )),
+                          RichText(
+                            text: const TextSpan(
+                              text: "Sign in ",
+                              style: TextStyle(
+                                color: AppColors.mblack,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
