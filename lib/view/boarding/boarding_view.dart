@@ -83,7 +83,3 @@ class BoardingView extends StatelessWidget {
         )));
   }
 }
-// TextEditingController emailController = TextEditingController();
-//   TextEditingController passwordController = TextEditingController();
-//   GlobalKey<FormState> formkey = GlobalKey<FormState>();
-//   User? userData;
