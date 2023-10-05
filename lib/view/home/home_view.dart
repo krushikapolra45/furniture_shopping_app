@@ -30,6 +30,32 @@ class HomeView extends StatelessWidget {
         "history": AppStrings.hSimple,
       }
     ];
+    List<Map<String, dynamic>> mainList = [
+      {
+        "lImage": AppAssets.star,
+        "text": "Populer",
+      },
+      {
+        "lImage": AppAssets.roundChair,
+        "text": "Chair",
+      },
+      {
+        "lImage": AppAssets.roundtable,
+        "text": "Table",
+      },
+      {
+        "lImage": AppAssets.roundsofa,
+        "text": "Armchair",
+      },
+      {
+        "lImage": AppAssets.bedRound,
+        "text": "Bed",
+      },
+      {
+        "lImage": AppAssets.lampRound,
+        "text": "Lamb",
+      }
+    ];
     Size size = MediaQuery.of(context).size;
     double screenHeight = size.height;
     double screenWidth = size.width;
@@ -74,23 +100,43 @@ class HomeView extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: 4,
+              itemCount: mainList.length,
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => Container(
-                width: screenWidth / 10,
-                height: 10,
-                child: Image.asset(
-                  AppAssets.roundCh,
-                ),
-                decoration: const BoxDecoration(
-                  color: AppColors.bg,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  children: [
+                    Container(
+                      height: screenHeight / 18,
+                      width: screenWidth / 8,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Image.asset(
+                          mainList[index]["lImage"],
+                          // color: AppColors.sub,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: AppColors.bg,
+                      ),
+                    ),
+                    Text(
+                      mainList[index]["text"],
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.sub,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
           Expanded(
             child: GridView.builder(
-                shrinkWrap: true,
+                // shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: furnitureList.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -100,13 +146,14 @@ class HomeView extends StatelessWidget {
                   mainAxisExtent: 280,
                 ),
                 itemBuilder: (context, index) {
-                  Column(
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
                         furnitureList[index]["populerImage"],
-                        height: screenHeight / 10,
-                        width: screenWidth / 5,
+                        // height: screenHeight / 20,
+                        width: screenWidth / 2.5,
                       ),
                       Text(
                         furnitureList[index]["history"],
