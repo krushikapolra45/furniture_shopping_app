@@ -3,7 +3,7 @@ class AppAssets {
   // static const String iconPath = "assets/icons/";
 
   static const String splash = "assets/images/splashimage.png";
-  static const String bchair = "assets/images/baby chair.png";
+  static const String bchair = "assets/images/";
   static const String bedRound = "assets/images/bed.jpg";
   static const String boy = "assets/images/boy.jpg";
   static const String bulb = "assets/images/bulb.png";
@@ -21,7 +21,7 @@ class AppAssets {
   static const String sofa = "assets/images/sofa.png";
   static const String roundsofa = "assets/images/sofa round.png";
   static const String stand = "assets/images/stand.png";
-  static const String stool = "assets/images/stool.png";
+  static const String stool = "assets/images/";
   static const String table = "assets/images/table chair.png";
   static const String roundtable = "assets/images/outlinetbl.png";
   static const String woodtble = "assets/images/wood table.png";

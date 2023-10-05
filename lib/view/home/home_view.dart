@@ -20,7 +20,7 @@ class HomeView extends StatelessWidget {
         "history": AppStrings.hMinimal,
       },
       {
-        "populerImage": AppAssets.table,
+        "populerImage": AppAssets.woodtble,
         "price": "\$ 12.00",
         "history": AppStrings.hCoffee,
       },
@@ -134,47 +134,46 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            child: GridView.builder(
-                // shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: furnitureList.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 25,
-                  crossAxisSpacing: 20,
-                  mainAxisExtent: 280,
-                ),
-                itemBuilder: (context, index) {
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        furnitureList[index]["populerImage"],
-                        // height: screenHeight / 20,
-                        width: screenWidth / 2.5,
+          GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: furnitureList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 25,
+                crossAxisSpacing: 20,
+                mainAxisExtent: 280,
+              ),
+              itemBuilder: (context, index) {
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      furnitureList[index]["populerImage"],
+                      // height: screenHeight / 20,
+                      width: screenWidth / 2.5,
+                    ),
+                    Text(
+                      furnitureList[index]["history"],
+                      style: const TextStyle(
+                        color: AppColors.sub,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
                       ),
-                      Text(
-                        furnitureList[index]["history"],
-                        style: const TextStyle(
-                          color: AppColors.sub,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                        ),
+                    ),
+                    Text(
+                      furnitureList[index]["price"],
+                      style: const TextStyle(
+                        color: AppColors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
                       ),
-                      Text(
-                        furnitureList[index]["price"],
-                        style: const TextStyle(
-                          color: AppColors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  );
-                }),
-          ),
+                    ),
+                  ],
+                );
+              }),
         ],
       ),
     );
