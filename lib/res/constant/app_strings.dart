@@ -21,6 +21,7 @@ class AppStrings {
   static const String hSimple = "Simple Desk";
   //product
   static const String cart = "Add to cart";
+  static const String minimal = "Minimal Stand";
   //favorite
   static const String fCart = "Add all to my cart";
   //cart
@@ -37,7 +38,7 @@ class AppStrings {
   static const String get = "Get Started";
   //congrats
   static const String review = "Rating & Review";
-  static const String minimal = "Minimal Stand";
+  // static const String minimal = "Minimal Stand";
   static const String bruno = "Bruno Fernandes";
   static const String kristin = "Kristin Watson";
   static const String ewrite = "Write a review";

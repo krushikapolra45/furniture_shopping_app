@@ -8,28 +8,6 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> furnitureList = [
-      {
-        "populerImage": AppAssets.light,
-        "price": "\$ 12.00",
-        "history": AppStrings.hBlack,
-      },
-      {
-        "populerImage": AppAssets.bchair,
-        "price": "\$ 25.00",
-        "history": AppStrings.hMinimal,
-      },
-      {
-        "populerImage": AppAssets.woodtble,
-        "price": "\$ 12.00",
-        "history": AppStrings.hCoffee,
-      },
-      {
-        "populerImage": AppAssets.stool,
-        "price": "\$ 12.00",
-        "history": AppStrings.hSimple,
-      }
-    ];
     List<Map<String, dynamic>> mainList = [
       {
         "lImage": AppAssets.star,
@@ -54,8 +32,39 @@ class HomeView extends StatelessWidget {
       {
         "lImage": AppAssets.lampRound,
         "text": "Lamb",
+      },
+      {
+        "lImage": AppAssets.bedRound,
+        "text": "Bed",
+      },
+      {
+        "lImage": AppAssets.lampRound,
+        "text": "Lamb",
+      },
+    ];
+    List<Map<String, dynamic>> furnitureList = [
+      {
+        "populerImage": AppAssets.light,
+        "price": "\$ 12.00",
+        "history": AppStrings.hBlack,
+      },
+      {
+        "populerImage": AppAssets.bchair,
+        "price": "\$ 25.00",
+        "history": AppStrings.hMinimal,
+      },
+      {
+        "populerImage": AppAssets.woodtble,
+        "price": "\$ 12.00",
+        "history": AppStrings.hCoffee,
+      },
+      {
+        "populerImage": AppAssets.stool,
+        "price": "\$ 12.00",
+        "history": AppStrings.hSimple,
       }
     ];
+
     Size size = MediaQuery.of(context).size;
     double screenHeight = size.height;
     double screenWidth = size.width;
@@ -89,7 +98,7 @@ class HomeView extends StatelessWidget {
           ],
         ),
         actions: [
-          Icon(
+          const Icon(
             Icons.shopping_cart_outlined,
             size: 20,
             color: AppColors.sub,
@@ -123,7 +132,7 @@ class HomeView extends StatelessWidget {
                     ),
                     Text(
                       mainList[index]["text"],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: AppColors.sub,
@@ -137,41 +146,64 @@ class HomeView extends StatelessWidget {
           GridView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
-              physics: const NeverScrollableScrollPhysics(),
+              // physics: const NeverScrollableScrollPhysics(),
               itemCount: furnitureList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisSpacing: 25,
-                crossAxisSpacing: 20,
-                mainAxisExtent: 280,
+                // crossAxisSpacing: 2,
+                mainAxisSpacing: 5,
+                mainAxisExtent: 270,
               ),
               itemBuilder: (context, index) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      furnitureList[index]["populerImage"],
-                      // height: screenHeight / 20,
-                      width: screenWidth / 2.5,
-                    ),
-                    Text(
-                      furnitureList[index]["history"],
-                      style: const TextStyle(
-                        color: AppColors.sub,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
+                return Padding(
+                  padding: const EdgeInsets.only(left: 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Stack(
+                        children: [
+                          Image.asset(
+                            furnitureList[index]["populerImage"],
+                            width: screenWidth / 2.3,
+                          ),
+                          Positioned(
+                            bottom: 20,
+                            right: 20,
+                            child: Container(
+                              height: screenHeight / 20,
+                              width: screenWidth / 10,
+                              decoration: BoxDecoration(
+                                color: AppColors.lightg,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: const Icon(
+                                Icons.shopping_bag,
+                                color: AppColors.black,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      furnitureList[index]["price"],
-                      style: const TextStyle(
-                        color: AppColors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
+                      SizedBox(height: screenHeight / 70),
+                      Text(
+                        furnitureList[index]["history"],
+                        style: const TextStyle(
+                          color: AppColors.sub,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
-                  ],
+                      // SizedBox(height: screenHeight / 150),
+                      Text(
+                        furnitureList[index]["price"],
+                        style: const TextStyle(
+                          color: AppColors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               }),
         ],
