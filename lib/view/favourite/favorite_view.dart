@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shopping_app/res/common/app_button.dart';
+import 'package:furniture_shopping_app/res/common/app_favorites.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 
@@ -16,7 +18,7 @@ class FavoriteView extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            Text(
+            const Text(
               "favorites",
               style: TextStyle(
                 color: AppColors.black,
@@ -24,17 +26,45 @@ class FavoriteView extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Row(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
-                  child: Image.asset(
-                    AppAssets.room,
-                    height: screenHeight / 8,
-                  ),
-                ),
-              ],
-            )
+            SizedBox(
+              height: screenHeight / 50,
+            ),
+            AppFavorites(
+              image: AppAssets.fav,
+            ),
+            const Divider(
+              thickness: 1,
+              color: AppColors.lightg,
+              indent: 15,
+              endIndent: 15,
+            ),
+            AppFavorites(
+              image: AppAssets.chairF,
+            ),
+            const Divider(
+              thickness: 1,
+              color: AppColors.lightg,
+              indent: 15,
+              endIndent: 15,
+            ),
+            AppFavorites(
+              image: AppAssets.white,
+            ),
+            const Divider(
+              thickness: 1,
+              color: AppColors.lightg,
+              indent: 15,
+              endIndent: 15,
+            ),
+            AppFavorites(
+              image: AppAssets.lamp,
+            ),
+            SizedBox(height: screenHeight / 30),
+            AppButton(
+              height: screenHeight / 15,
+              width: screenWidth / 1.1,
+              text: "Add to my cart",
+            ),
           ],
         ),
       ),

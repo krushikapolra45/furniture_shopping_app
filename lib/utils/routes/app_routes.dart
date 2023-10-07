@@ -1,5 +1,6 @@
 import 'package:furniture_shopping_app/utils/routes/routes_name.dart';
 import 'package:furniture_shopping_app/view/boarding/boarding_view.dart';
+import 'package:furniture_shopping_app/view/check_out/check_out_view.dart';
 import 'package:furniture_shopping_app/view/favourite/favorite_view.dart';
 import 'package:furniture_shopping_app/view/home/home_view.dart';
 import 'package:furniture_shopping_app/view/login/login_view.dart';
@@ -26,6 +27,9 @@ class AppRoutes {
         // binding:
         ),
     GetPage(name: RoutesName.favoriteView, page: () => FavoriteView()
+        // binding:
+        ),
+    GetPage(name: RoutesName.checkOutView, page: () => CheckOutView()
         // binding:
         ),
   ];
