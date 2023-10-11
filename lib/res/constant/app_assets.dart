@@ -26,7 +26,7 @@ class AppAssets {
   static const String roundtable = "assets/images/outlinetbl.png";
   static const String woodtble = "assets/images/wood table.png";
   static const String wood = "assets/images/wood.png";
-  static const String star = "assets/images/star 1.png";
+  // static const String star = "assets/images/star 1.png";
   static const String marker = "assets/images/marker.png";
   static const String product = "assets/images/product.png";
   static const String fav = "assets/images/favoritesch.png";
@@ -36,4 +36,5 @@ class AppAssets {
   static const String lamp = "assets/images/lampf.png";
   static const String night = "assets/images/nightlamp.png";
   static const String long = "assets/images/longtable.png";
+  static const String star = "assets/images/star.png";
 }
