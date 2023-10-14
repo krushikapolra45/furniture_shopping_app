@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shopping_app/res/common/app_button.dart';
 import 'package:furniture_shopping_app/res/common/app_hedding.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
@@ -29,9 +30,9 @@ class ReviewView extends StatelessWidget {
                     AppAssets.fav,
                     width: screenWidth / 4,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: const Column(
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -67,52 +68,139 @@ class ReviewView extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: screenHeight / 30),
             Container(
-              width: screenWidth / 1.2,
-              color: AppColors.white,
+              width: screenWidth / 1.1,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: AppColors.white,
+              ),
               child: Stack(
+                alignment: Alignment.topCenter,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            AppStrings.bruno,
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: AppColors.black,
-                              fontWeight: FontWeight.w500,
-                            ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Row(
+                            children: [
+                              const Text(
+                                AppStrings.bruno,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: AppColors.black,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              SizedBox(width: screenWidth / 2.7),
+                              const Text(
+                                "20/03/2020",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: AppColors.sub,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
                           ),
-                          SizedBox(width: screenWidth / 2.9),
-                          Text(
-                            "20/03/2020",
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: AppColors.sub,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Image.asset(
-                        AppAssets.star,
-                        width: screenWidth / 4,
-                      ),
-                      Text(
-                        "Nice Furniture with good delivery. The delivery\ntime is very fast. Then products look like \n exactlythe picture in the app.",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: AppColors.sub,
-                          fontWeight: FontWeight.w400,
                         ),
-                      ),
-                    ],
+                        Image.asset(
+                          AppAssets.star,
+                          width: screenWidth / 4,
+                        ),
+                        SizedBox(height: screenHeight / 50),
+                        const Text(
+                          "Nice Furniture with good delivery. The delivery\ntime is very fast. Then products look like \nexactlythe picture in the app.",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppColors.sub,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Image.asset(
+                    AppAssets.boy,
+                    width: screenWidth / 12,
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(height: screenHeight / 30),
+            Container(
+              width: screenWidth / 1.1,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: AppColors.white,
+              ),
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              const Text(
+                                AppStrings.kristin,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: AppColors.black,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              SizedBox(width: screenWidth / 2.5),
+                              const Text(
+                                "20/03/2020",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: AppColors.sub,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Image.asset(
+                          AppAssets.star,
+                          width: screenWidth / 4,
+                        ),
+                        SizedBox(height: screenHeight / 50),
+                        const Text(
+                          "Nice Furniture with good delivery. The delivery\ntime is very fast. Then products look like\nexactly the picture in the app. Besides,\ncolor is also the same and quality is very\ngood despite very cheap price",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppColors.sub,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Image.asset(
+                    AppAssets.girl,
+                    width: screenWidth / 13,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: screenHeight / 30),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: AppButton(
+                height: screenHeight / 15,
+                width: screenWidth / 1,
+                text: "write a review",
+              ),
+            ),
           ],
         ),
       ),

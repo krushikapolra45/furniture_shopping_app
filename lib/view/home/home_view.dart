@@ -97,8 +97,8 @@ class HomeView extends StatelessWidget {
             ),
           ],
         ),
-        actions: [
-          const Icon(
+        actions: const [
+          Icon(
             Icons.shopping_cart_outlined,
             size: 20,
             color: AppColors.sub,
