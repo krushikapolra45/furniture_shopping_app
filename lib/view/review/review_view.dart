@@ -68,85 +68,26 @@ class ReviewView extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: screenHeight / 30),
-            Container(
-              width: screenWidth / 1.1,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.white,
-              ),
-              child: Stack(
-                alignment: Alignment.topCenter,
-                children: [
-                  Padding(
+            SizedBox(height: screenHeight / 50),
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  width: screenWidth / 1.1,
+                  margin: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.white,
+                  ),
+                  child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Row(
-                            children: [
-                              const Text(
-                                AppStrings.bruno,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: AppColors.black,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                              SizedBox(width: screenWidth / 2.7),
-                              const Text(
-                                "20/03/2020",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: AppColors.sub,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ],
+                          padding: const EdgeInsets.only(
+                            top: 15,
                           ),
-                        ),
-                        Image.asset(
-                          AppAssets.star,
-                          width: screenWidth / 4,
-                        ),
-                        SizedBox(height: screenHeight / 50),
-                        const Text(
-                          "Nice Furniture with good delivery. The delivery\ntime is very fast. Then products look like \nexactlythe picture in the app.",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: AppColors.sub,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Image.asset(
-                    AppAssets.boy,
-                    width: screenWidth / 12,
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: screenHeight / 30),
-            Container(
-              width: screenWidth / 1.1,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.white,
-              ),
-              child: Stack(
-                alignment: Alignment.topCenter,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
                           child: Row(
                             children: [
                               const Text(
@@ -169,6 +110,71 @@ class ReviewView extends StatelessWidget {
                             ],
                           ),
                         ),
+                        SizedBox(height: screenHeight / 120),
+                        Image.asset(
+                          AppAssets.star,
+                          width: screenWidth / 4,
+                        ),
+                        SizedBox(height: screenHeight / 50),
+                        const Text(
+                          "Nice Furniture with good delivery. The delivery\ntime is very fast. Then products look like\nexactly the picture in the app.",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppColors.sub,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Image.asset(
+                  AppAssets.boy,
+                  width: screenWidth / 13,
+                ),
+              ],
+            ),
+            SizedBox(height: screenHeight / 50),
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  width: screenWidth / 1.1,
+                  margin: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.white,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15),
+                          child: Row(
+                            children: [
+                              const Text(
+                                AppStrings.kristin,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: AppColors.black,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              SizedBox(width: screenWidth / 2.5),
+                              const Text(
+                                "20/03/2020",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: AppColors.sub,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: screenHeight / 120),
                         Image.asset(
                           AppAssets.star,
                           width: screenWidth / 4,
@@ -185,12 +191,12 @@ class ReviewView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Image.asset(
-                    AppAssets.girl,
-                    width: screenWidth / 13,
-                  ),
-                ],
-              ),
+                ),
+                Image.asset(
+                  AppAssets.girl,
+                  width: screenWidth / 13,
+                ),
+              ],
             ),
             SizedBox(height: screenHeight / 30),
             Padding(

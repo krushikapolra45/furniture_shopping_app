@@ -30,7 +30,8 @@ class AppAssets {
   static const String marker = "assets/images/marker.png";
   static const String product = "assets/images/product.png";
   static const String fav = "assets/images/favoritesch.png";
-  static const String chairF = "assets/images/chairf.png";
+  static const String roomc = "assets/images/roomchair.png";
+  static const String cusion = "assets/images/cusion.png";
   static const String white = "assets/images/whitech.png";
   static const String woodc = "assets/images/woodchair.png";
   static const String lamp = "assets/images/lampf.png";

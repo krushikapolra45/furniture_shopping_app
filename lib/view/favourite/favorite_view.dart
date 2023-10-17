@@ -119,6 +119,7 @@ class FavoriteView extends StatelessWidget {
               width: screenWidth / 1.1,
               text: "submit order",
             ),
+            SizedBox(height: screenHeight / 10),
           ],
         ),
       ),
