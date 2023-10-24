@@ -4,6 +4,8 @@ import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 import 'package:furniture_shopping_app/res/constant/app_strings.dart';
 
+import '../login/login_view.dart';
+
 class BoardingView extends StatelessWidget {
   const BoardingView({super.key});
 
@@ -14,9 +16,9 @@ class BoardingView extends StatelessWidget {
     double screenWidth = size.width;
     EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
     return Padding(
-        padding: devicePadding,
-        child: Scaffold(
-            body: Container(
+      padding: devicePadding,
+      child: Scaffold(
+        body: Container(
           height: double.infinity,
           width: double.infinity,
           decoration: const BoxDecoration(
@@ -26,13 +28,13 @@ class BoardingView extends StatelessWidget {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.all(screenWidth / 20),
+            padding: const EdgeInsets.all(20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: screenHeight / 12,
+                  height: screenHeight / 20,
                 ),
                 const Text(
                   AppStrings.sboarding,
@@ -56,13 +58,22 @@ class BoardingView extends StatelessWidget {
                 const Spacer(),
                 AppButton(
                   height: screenHeight / 15,
-                  width: screenWidth / 1.3,
+                  width: screenWidth / 1.1,
                   text: AppStrings.start,
-                  onPress: () {},
-                )
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginView(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
-        )));
+        ),
+      ),
+    );
   }
 }

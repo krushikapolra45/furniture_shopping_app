@@ -32,7 +32,7 @@ class FavoriteView extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            Text(
+            const Text(
               "favorites",
               style: TextStyle(
                 fontSize: 16,
@@ -77,7 +77,7 @@ class FavoriteView extends StatelessWidget {
                                     color: AppColors.black,
                                     fontWeight: FontWeight.w600,
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -105,7 +105,7 @@ class FavoriteView extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: AppColors.sub,
                       ),

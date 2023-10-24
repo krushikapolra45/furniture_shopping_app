@@ -8,4 +8,5 @@ class RoutesName {
   static const String checkOutView = "/CheckOutView";
   static const String congratsView = "/CongratsView";
   static const String reviewView = "/ReviewView";
+  static const String profileView = "/ProfileView";
 }

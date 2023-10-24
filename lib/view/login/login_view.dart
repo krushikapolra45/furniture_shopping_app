@@ -58,33 +58,31 @@ class LoginView extends StatelessWidget {
                 Container(
                   width: screenWidth / 1.2,
                   height: screenHeight / 2,
-                  color: AppColors.white,
+                  color: AppColors.bg,
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 48),
+                        padding: EdgeInsets.only(top: 50),
                         child: Container(
                           height: screenHeight / 10.5,
                           width: screenWidth / 1.3,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4),
-                              border: Border.all(
-                                width: 1,
-                                color: AppColors.lightg,
-                              )),
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                              width: 1,
+                              color: AppColors.lightg,
+                            ),
+                          ),
                           child: const Column(
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: EdgeInsets.only(top: 8.0, left: 8),
-                                  child: Text(
-                                    AppStrings.email,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: AppColors.sub,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                child: Text(
+                                  AppStrings.email,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: AppColors.sub,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ),
@@ -93,22 +91,24 @@ class LoginView extends StatelessWidget {
                                   isDense: false,
                                   border: InputBorder.none,
                                   filled: false,
+                                  contentPadding: EdgeInsets.all(8),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ),
-                      SizedBox(height: screenHeight / 40),
+                      SizedBox(height: screenHeight / 60),
                       Container(
-                        height: screenHeight / 10.5,
+                        height: screenHeight / 11,
                         width: screenWidth / 1.3,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                              width: 1,
-                              color: AppColors.lightg,
-                            )),
+                          borderRadius: BorderRadius.circular(4),
+                          border: Border.all(
+                            width: 1,
+                            color: AppColors.lightg,
+                          ),
+                        ),
                         child: const Column(
                           children: [
                             Align(
@@ -136,7 +136,7 @@ class LoginView extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: screenHeight / 40),
-                      Text(
+                      const Text(
                         AppStrings.fPassword,
                         style: TextStyle(
                           fontSize: 16,
@@ -152,7 +152,7 @@ class LoginView extends StatelessWidget {
                         onPress: () {},
                       ),
                       SizedBox(height: screenHeight / 40),
-                      Text(
+                      const Text(
                         AppStrings.sign,
                         style: TextStyle(
                           fontSize: 16,

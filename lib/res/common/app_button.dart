@@ -30,7 +30,7 @@ class AppButton extends StatelessWidget {
       onPressed: onPress ?? () {},
       child: Text(
         text ?? "",
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 18,
           fontFamily: "Poppins",
           fontWeight: FontWeight.w400,
