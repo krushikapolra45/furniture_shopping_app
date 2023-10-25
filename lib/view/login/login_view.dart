@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shopping_app/res/common/app_button.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
-import 'package:furniture_shopping_app/res/constant/app_strings.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+
+import '../../res/common/app_button.dart';
+import '../../res/constant/app_strings.dart';
+import '../../utils/Routes/routes_name.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -20,69 +24,85 @@ class LoginView extends StatelessWidget {
           children: [
             Column(
               children: [
+                SizedBox(height: screenHeight / 30),
                 Row(
                   children: [
                     const Expanded(
                       child: Divider(
-                        thickness: 1,
+                        thickness: 0.8,
                         indent: 23,
-                        endIndent: 20,
+                        endIndent: 5,
                         color: AppColors.lGray,
                       ),
                     ),
-                    SizedBox(width: screenWidth / 50),
+                    SizedBox(width: screenWidth / 60),
                     Image.asset(
-                      AppAssets.chair,
-                      height: screenHeight / 10,
+                      AppAssets.sofa,
+                      height: screenHeight / 11,
                     ),
                     const Expanded(
                       child: Divider(
-                        thickness: 1,
+                        thickness: 0.8,
                         endIndent: 23,
-                        indent: 23,
+                        indent: 5,
                         color: AppColors.lGray,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: screenHeight / 50),
-                const Text(
+                Text(
                   textAlign: TextAlign.center,
                   AppStrings.welcome,
                   style: TextStyle(
-                    fontSize: 32,
+                    color: AppColors.black,
                     fontWeight: FontWeight.w600,
+                    fontSize: 32,
                   ),
                 ),
                 SizedBox(height: screenHeight / 50),
                 Container(
-                  width: screenWidth / 1.2,
-                  height: screenHeight / 2,
-                  color: AppColors.bg,
+                  height: screenHeight / 1.95,
+                  width: screenWidth / 1.1,
+                  decoration: BoxDecoration(
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(3),
+                    boxShadow: const [BoxShadow(blurRadius: 04, color: Color(0xFFD9D9D9))],
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: AppColors.lightGrey,
+                    //     offset: Offset(1.4, 1.4),
+                    //     blurRadius: 10,
+                    //     spreadRadius: 2,
+                    //   ),
+                    // ],
+                  ),
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 50),
+                        padding: const EdgeInsets.only(top: 40),
                         child: Container(
                           height: screenHeight / 10.5,
                           width: screenWidth / 1.3,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                              width: 1,
-                              color: AppColors.lightg,
-                            ),
-                          ),
+                              borderRadius: BorderRadius.circular(4),
+                              border: Border.all(
+                                width: 1,
+                                color: AppColors.lightg,
+                              )),
                           child: const Column(
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text(
-                                  AppStrings.email,
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: AppColors.sub,
-                                    fontWeight: FontWeight.w500,
+                                child: Padding(
+                                  padding: EdgeInsets.only(top: 8.0, left: 8),
+                                  child: Text(
+                                    "email",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: AppColors.sub,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -91,24 +111,22 @@ class LoginView extends StatelessWidget {
                                   isDense: false,
                                   border: InputBorder.none,
                                   filled: false,
-                                  contentPadding: EdgeInsets.all(8),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ),
-                      SizedBox(height: screenHeight / 60),
+                      SizedBox(height: screenHeight / 50),
                       Container(
-                        height: screenHeight / 11,
+                        height: screenHeight / 10.5,
                         width: screenWidth / 1.3,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          border: Border.all(
-                            width: 1,
-                            color: AppColors.lightg,
-                          ),
-                        ),
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                              width: 1,
+                              color: AppColors.lightg,
+                            )),
                         child: const Column(
                           children: [
                             Align(
@@ -135,29 +153,36 @@ class LoginView extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: screenHeight / 40),
-                      const Text(
-                        AppStrings.fPassword,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColors.mblack,
-                          fontWeight: FontWeight.w500,
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          AppStrings.fPassword,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 17,
+                            color: AppColors.mblack,
+                          ),
                         ),
                       ),
-                      SizedBox(height: screenHeight / 40),
                       AppButton(
                         height: screenHeight / 15,
                         width: screenWidth / 1.3,
                         text: AppStrings.log,
-                        onPress: () {},
+                        onPress: () {
+                          Get.offNamed(RoutesName.homeView);
+                        },
                       ),
-                      SizedBox(height: screenHeight / 40),
-                      const Text(
-                        AppStrings.sign,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColors.mblack,
-                          fontWeight: FontWeight.w500,
+                      TextButton(
+                        onPressed: () {
+                          Get.toNamed(RoutesName.signUpView);
+                        },
+                        child: const Text(
+                          AppStrings.sign,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 17,
+                            color: AppColors.mblack,
+                          ),
                         ),
                       ),
                     ],

@@ -10,7 +10,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> mainList = [
       {
-        "lImage": AppAssets.star,
+        "lImage": AppAssets.star0ne,
         "text": "Populer",
       },
       {
@@ -24,14 +24,6 @@ class HomeView extends StatelessWidget {
       {
         "lImage": AppAssets.roundsofa,
         "text": "Armchair",
-      },
-      {
-        "lImage": AppAssets.bedRound,
-        "text": "Bed",
-      },
-      {
-        "lImage": AppAssets.lampRound,
-        "text": "Lamb",
       },
       {
         "lImage": AppAssets.bedRound,
@@ -119,7 +111,7 @@ class HomeView extends StatelessWidget {
                       height: screenHeight / 18,
                       width: screenWidth / 8,
                       child: Padding(
-                        padding: const EdgeInsets.all(8),
+                        padding: EdgeInsets.all(8),
                         child: Image.asset(
                           mainList[index]["lImage"],
                           // color: AppColors.sub,
@@ -150,8 +142,8 @@ class HomeView extends StatelessWidget {
               itemCount: furnitureList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                // crossAxisSpacing: 2,
-                mainAxisSpacing: 5,
+                crossAxisSpacing: 2,
+                mainAxisSpacing: 2,
                 mainAxisExtent: 270,
               ),
               itemBuilder: (context, index) {
