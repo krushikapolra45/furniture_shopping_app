@@ -24,7 +24,7 @@ class LoginView extends StatelessWidget {
           children: [
             Column(
               children: [
-                SizedBox(height: screenHeight / 30),
+                SizedBox(height: screenHeight / 80),
                 Row(
                   children: [
                     const Expanded(
@@ -37,7 +37,7 @@ class LoginView extends StatelessWidget {
                     ),
                     SizedBox(width: screenWidth / 60),
                     Image.asset(
-                      AppAssets.sofa,
+                      AppAssets.chair,
                       height: screenHeight / 11,
                     ),
                     const Expanded(
@@ -51,7 +51,7 @@ class LoginView extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: screenHeight / 50),
-                Text(
+                const Text(
                   textAlign: TextAlign.center,
                   AppStrings.welcome,
                   style: TextStyle(
@@ -67,15 +67,14 @@ class LoginView extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: AppColors.white,
                     borderRadius: BorderRadius.circular(3),
-                    boxShadow: const [BoxShadow(blurRadius: 04, color: Color(0xFFD9D9D9))],
-                    // boxShadow: [
-                    //   BoxShadow(
-                    //     color: AppColors.lightGrey,
-                    //     offset: Offset(1.4, 1.4),
-                    //     blurRadius: 10,
-                    //     spreadRadius: 2,
-                    //   ),
-                    // ],
+                    boxShadow: const [
+                      BoxShadow(
+                        color: AppColors.lightg,
+                        offset: Offset(0, 3),
+                        blurRadius: 25,
+                        spreadRadius: 0,
+                      ),
+                    ],
                   ),
                   child: Column(
                     children: [

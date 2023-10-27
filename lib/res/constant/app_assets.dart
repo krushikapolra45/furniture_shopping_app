@@ -12,6 +12,7 @@ class AppAssets {
   static const String roundChair = "assets/images/outlinech.png";
   static const String coffee = "assets/images/coffee table.png";
   static const String girl = "assets/images/girl.jpg";
+  static const String girls = "assets/images/girls.png";
   static const String graph = "assets/images/Graphics.jpg";
   static const String lampRound = "assets/images/lamp round.png";
   static const String light = "assets/images/light.png";

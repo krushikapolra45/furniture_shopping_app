@@ -10,4 +10,5 @@ class RoutesName {
   static const String reviewView = "/ReviewView";
   static const String profileView = "/ProfileView";
   static const String mainPageView = "/MainPageView";
+  static const String notificationView = "/NotificationView";
 }

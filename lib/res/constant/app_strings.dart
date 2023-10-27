@@ -50,4 +50,11 @@ class AppStrings {
   static const String ewrite = "Write a review";
   //notification
   static const String notification = "Notificaton";
+  static const String notnew = "new";
+  static const String hot = "Hot";
+  //profile
+  static const String profilen = "Kristin Watson";
+  static const String id = "bruno203@gmail.com";
+  static const String orderp = "My orders";
+  static const String totleo = "Already have 10 orders";
 }

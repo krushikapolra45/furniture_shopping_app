@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       getPages: AppRoutes.getPages,
-      initialRoute: RoutesName.loginView,
+      initialRoute: RoutesName.mainPageView,
     );
   }
 }

@@ -38,7 +38,7 @@ class SignUpView extends StatelessWidget {
                     const Expanded(
                       child: Divider(
                         thickness: 1,
-                        endIndent: 23,
+                        endIndent: 20,
                         indent: 23,
                         color: AppColors.lGray,
                       ),
@@ -58,20 +58,31 @@ class SignUpView extends StatelessWidget {
                 Container(
                   width: screenWidth / 1.1,
                   height: screenHeight / 1.5,
-                  color: AppColors.white,
+                  decoration: const BoxDecoration(
+                    color: AppColors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColors.lightg,
+                        offset: Offset(0, 3),
+                        blurRadius: 25,
+                        spreadRadius: 0,
+                      ),
+                    ],
+                  ),
                   child: Column(
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 40),
                         child: Container(
                           height: screenHeight / 10.5,
-                          width: screenWidth / 1.3,
+                          width: screenWidth / 1.2,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4),
-                              border: Border.all(
-                                width: 1,
-                                color: AppColors.lightg,
-                              )),
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                              width: 1,
+                              color: AppColors.lightg,
+                            ),
+                          ),
                           child: const Column(
                             children: [
                               Align(
@@ -99,10 +110,10 @@ class SignUpView extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: screenHeight / 40),
+                      SizedBox(height: screenHeight / 50),
                       Container(
                         height: screenHeight / 10.5,
-                        width: screenWidth / 1.3,
+                        width: screenWidth / 1.2,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
                             border: Border.all(
@@ -135,10 +146,10 @@ class SignUpView extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: screenHeight / 40),
+                      SizedBox(height: screenHeight / 50),
                       Container(
                         height: screenHeight / 10.5,
-                        width: screenWidth / 1.3,
+                        width: screenWidth / 1.2,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
                             border: Border.all(
@@ -171,10 +182,10 @@ class SignUpView extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: screenHeight / 40),
+                      SizedBox(height: screenHeight / 50),
                       Container(
                         height: screenHeight / 10.5,
-                        width: screenWidth / 1.3,
+                        width: screenWidth / 1.2,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
                             border: Border.all(
@@ -207,10 +218,10 @@ class SignUpView extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: screenHeight / 40),
+                      SizedBox(height: screenHeight / 50),
                       AppButton(
                         height: screenHeight / 15,
-                        width: screenWidth / 1.3,
+                        width: screenWidth / 1.2,
                         text: AppStrings.sign,
                         onPress: () {},
                       ),
