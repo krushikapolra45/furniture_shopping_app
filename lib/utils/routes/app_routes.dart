@@ -7,6 +7,7 @@ import 'package:furniture_shopping_app/view/favourite/favorite_view.dart';
 import 'package:furniture_shopping_app/view/home/home_view.dart';
 import 'package:furniture_shopping_app/view/login/login_view.dart';
 import 'package:furniture_shopping_app/view/notification/notification_view.dart';
+import 'package:furniture_shopping_app/view/order/order_view.dart';
 import 'package:furniture_shopping_app/view/product/product_view.dart';
 import 'package:furniture_shopping_app/view/profile/profile_view.dart';
 import 'package:furniture_shopping_app/view/review/review_view.dart';
@@ -54,6 +55,10 @@ class AppRoutes {
     ),
     GetPage(
       name: RoutesName.notificationView, page: () => const NotificationView(),
+      // binding:
+    ),
+    GetPage(
+      name: RoutesName.orderView, page: () => const OrderView(),
       // binding:
     ),
   ];
