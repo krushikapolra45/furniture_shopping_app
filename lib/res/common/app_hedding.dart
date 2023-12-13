@@ -15,7 +15,7 @@ class AppHedding extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
-          Icon(
+          const Icon(
             Icons.arrow_back_ios_new,
             color: AppColors.black,
             size: 20,
@@ -23,7 +23,7 @@ class AppHedding extends StatelessWidget {
           SizedBox(width: screenWidth / 2.7),
           Text(
             name ?? "",
-            style: TextStyle(
+            style: const TextStyle(
               color: AppColors.black,
               fontWeight: FontWeight.w600,
               fontSize: 16,

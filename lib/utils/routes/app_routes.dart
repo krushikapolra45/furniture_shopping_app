@@ -27,7 +27,6 @@ class AppRoutes {
         ),
     GetPage(name: RoutesName.homeView, page: () => const HomeView()
         // binding:
-
         ),
     GetPage(name: RoutesName.productView, page: () => const ProductView()
         // binding:
